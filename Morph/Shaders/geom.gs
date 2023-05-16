@@ -24,6 +24,7 @@ uniform bool shading = true;
 
 vec3 GetNormal(int id)
 {
+	//get normal from vert shader or calculate new normals
 	vec3 n = vec3(0);
 	if(shading)
 	{
@@ -47,7 +48,7 @@ void main()
 	vColor = gs_in[0].vColor;
 	Normal = GetNormal(0);
 	Highlight = gs_in[0].Highlight;
-	Dist = vec3(1,0,0);
+	Dist = vec3(1,0,0); // pass barycentric coords to fragment shader
 	EmitVertex();
 	gl_Position = gl_in[1].gl_Position;
 	FragPos = vec3(gl_in[1].gl_Position);

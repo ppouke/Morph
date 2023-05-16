@@ -48,6 +48,9 @@ uniform DirLight dirLight;
 uniform vec3 viewPos;
 
 vec3 CalcDirLight(DirLight light,vec3 normal, vec3 viewDir, vec3 color){
+	
+	//phong shading for direction light
+
 	vec3 lightDir = normalize(-light.direction);
 	float diff = max(dot(normal, lightDir), 0.0);
 	vec3 reflectDir = reflect(-lightDir, normal);
@@ -114,6 +117,7 @@ void main()
 
 	//pointlights
 	for(int i = 0; i < NR_POINT_LIGHTS; i++){
+		// skip point lights for now
 		//result += CalcPointLight(pointLights[i], norm, FragPos,  viewDir, color);
 	}
 
