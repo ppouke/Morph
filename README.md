@@ -46,6 +46,6 @@ The project can be run in Debug or Release mode
 
 ## Standalone executable
 
-The standalone executable can be found [here](https://github.com/ppouke/Morph/releases/tag/v1.0)  
+The standalone executable (x64) can be found [here](https://github.com/ppouke/Morph/releases/tag/v1.0)  
 MorphExecutable.zip file contains the executable as well as the  necessary shaders in a folder.
 
